@@ -1,0 +1,25 @@
+#This is the basic localisation of focus names and descriptions. Say a foucs file is deez_nuts, you would do deez_nuts:0 "Insert Title" and deez_nuts_desc:0 "Insert Description"
+CUM_start:0 "The Cumzone" 
+CUM_start_desc:0 "What is the Cumzone?" 
+ 
+ #This is the basic focus stuff
+ 	focus = {
+		id = CUM_start #focus Id
+		icon = GFX_focus_generic_cumzone #focus icon
+		#prerequisite = { focus = CUM_ } #what the focus requires
+		x = 4 #location
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY } #stupid
+
+		bypass = {
+		}
+		completion_reward = { #what it gives you
+			country_event = cumzone.1			
+		}
+	}
