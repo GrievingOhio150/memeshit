@@ -1,0 +1,46 @@
+	focus = {
+		id = STR_democratic_focus
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = STR_start }
+		x = 0
+		y = 1
+		relative_position_id = STR_start
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		mutually_exclusive = { focus = STR_fascism_focus focus = STR_communism_focus }
+
+
+		bypass = {
+		}
+		completion_reward = {
+		}
+	}
+  	focus = {
+		id = STR_establish_free_elections
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = STR_democratic_focus }
+		x = 0
+		y = 1
+		relative_position_id = STR_democratic_focus
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		mutually_exclusive = { focus = STR_fascism_focus focus = STR_communism_focus }
+
+
+		bypass = {
+		}
+		completion_reward = {
+		}
+	}
