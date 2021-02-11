@@ -1,0 +1,42 @@
+focus_tree = {
+	id = doneyaids_focus
+	country = { 
+		factor = 0
+		
+			modifier = {
+				 add = 10
+				 tag = DNA
+			}
+		}
+	default = yes
+	
+	continuos_focus_position = { x = 
+DNA_start:0 "Aids From A Special Boy"
+DNA_start_desc:0 "The start of something tragic."
+focus = {
+		 id = DNA_is_the_best 
+		 icon = GFX_focus_generic_doneyaids		
+		 x = 8
+		 y = 2
+		 relative_position_id = 
+		 #prerequisite = { focus = DNA_ } 
+		 
+		 cost = 10
+		 ai_will_do = {
+				factor = 10
+				modifier = {
+				BRA = {has_government = non_aligned } 
+		} 
+
+			available = {
+			NOT = { annexed by = BRA }
+			search_filters = { FOCUS_FILTER_STABILTY }
+			cancel_if_invalid = yes
+			continue_if_inalid = no
+			available_if_capitulated = no 
+			
+			bypass = { 
+			}
+			completion_reward = { 
+			}
+			
